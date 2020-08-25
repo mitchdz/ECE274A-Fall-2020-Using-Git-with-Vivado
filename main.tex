@@ -90,23 +90,41 @@
 \listoffigures
 \clearpage
 
-\section{Intro to Git} \label{Intro to Git}
+
+\section{Overview} \label{Overview}
+This guide will provide supplementary information for ECE 274A Lab section. This guide will be extremely useful for managing and storing the source code of your project. This guide will assume no prior knowledge of git or bash is known. The two major concepts that this guide will explain are the following:
+\begin{enumerate}
+    \item basic git usage
+    \item basic bash usage
+\end{enumerate}
+
+This guide will most likely use language that you may not be familiar with. Most things are explained thoroughly but if you are not exactly sure what a word means you are encouraged to look it up or ask on Piazza!
+
+\textbf{NOTE: This is not information you will be tested on, but rather information that will be helpful in this class and your future career as an engineer.}
+
+\section{Intro to Git and Bash} \label{Intro to Git}
 \subsection{What is Git?}
-Git is a very common VCS (Version Control Software) that you will see in industry. Git has an emphasis on speed, data integrity and distributed workloads. All VCS systems generally have a similar goal of tracking changes in files and storing data on a remote server.
+Git is a very common \textbf{VCS (Version Control Software)} that you will see in industry. Git has an emphasis on speed, data integrity and distributed workloads. All VCS systems generally have a similar goal of tracking changes in files and storing data on a remote server.
 
 You can learn all about git through their official website \href{https://git-scm.com/}{https://git-scm.com/}. The book "Pro Git" is also completely free to view through your browser \href{https://git-scm.com/book/en/v2}{https://git-scm.com/book/en/v2}.
 
-What you will be learning in this guide is basic git commands which will help you properly store your code on a remote server, and remotely upload your code to the lab computers. This will also help you track milestones in the project so you can revert any changes or go back to a period of time that you know the project was working :).
+\subsection{What is Bash?}
+Bash is an acronym that stands for Bourne Again SHell. Bash is the unix shell that GNU Project maintains. A unix shell is simply just a command-line interpreter that sends commands directly to the operating system. You can think of Bash simply as your terminal.
 
+\begin{center}
+    \includegraphics[scale=0.4]{Flow1.jpg}
+    \captionof{figure}{Command Flow}
+    \label{fig:user_flow}
+\end{center}
 
+Figure~\ref{fig:user_flow} is a diagram provided from opensuse at \href{https://en.opensuse.org/images/e/e2/Flow1.jpg}{https://en.opensuse.org/images/e/e2/Flow1.jpg} which goes deeper into how the user interacts with the system. You as the User will send commands to the Kernel using a Shell (in our case, Bash), where the Kernel then controls the Hardware. Think of the Kernel as a resource manager.
 
 \section{Using Git with Windows} \label{Using Git with Windows}
 Windows does not have a git client by default, so we will need to download software for that. This guide will utilize the popular \emph{git for windows}, or better known as Git Bash.
 \subsection{Git Bash}
 \subsubsection{Installation} \label{Win10-GitBashInstall}
-Enter the website \url{https://gitforwindows.org/} and click "Download". Once the download is finished, open the installer. All of the default options are good, sane options, so just keep clicking "Next" Until the installation is done.
+On the Lab PC, enter the website \url{https://gitforwindows.org/} and click "Download". Once the download is finished, open the installer. All of the default options are good, sane options, so just keep clicking "Next" Until the installation is done.
 \subsubsection{Using Git Bash}
-
 When you are finished downloading Git Bash from Section \ref{Win10-GitBashInstall}, you can open up Git Bash by typing in "git bash" after pressing the windows key. Upon pressing enter, you will be greeted with a terminal that looks like the Figure~\ref{fig:win_06_Git_Bash}.
 
 \begin{center}
@@ -115,7 +133,7 @@ When you are finished downloading Git Bash from Section \ref{Win10-GitBashInstal
     \label{fig:win_06_Git_Bash}
 \end{center}
 
-Now that you are in the terminal, you can use any commands that any usual bash terminal would have. You can enter the following command \textbf{(do not type the \$ at the start of the command)}:
+Now that you are in the terminal, you can use any commands that any usual bash terminal would have. You can enter the following command \textbf{(do not type the \$ at the start of the command, that is there by default)}:
 
 \begin{lstlisting}
 $ echo $PWD
@@ -156,13 +174,24 @@ now you will be located in $\sim$/Documents/git. From here, let's clone a refere
 $ git clone https://github.com/mitchdz/ExampleVerilogCode
 \end{lstlisting}
 
-now if you execute the command:
+now if you change directory into the new git folder you will see the code in the folder.
 
 \begin{lstlisting}
-$ ls -l
+$ cd ExampleVerilogCode
+$ ls
 \end{lstlisting}
 
-you will see that the new directory 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -184,7 +213,7 @@ Omit --global to set the identity only in this repository.
 fatal: unable to auto-detect email address (got 'mitch@DESKTOP-AJ9NBNN.(none)')
 \end{verbatim}
 
-
+\clearpage
 \section{Creating your own Github Repository}
 There is a lot of software that utilizes git such as GitHub, SourceForge, Bitbucket and GitLab. For this guide we will utilize Github. To get some cool bonuses for being a student you can even register for the student pack at \href{https://education.github.com/pack}{https://education.github.com/pack}.
 
@@ -193,9 +222,11 @@ There is a lot of software that utilizes git such as GitHub, SourceForge, Bitbuc
 
 
 \section{Using Verilog Code from Github in Vivado}
-\subsection{Windows}
 
-
+\clearpage
 \section{Advanced Git Commands}
+
+
+\section{Advanced Bash Commands}
 
 \end{document}
